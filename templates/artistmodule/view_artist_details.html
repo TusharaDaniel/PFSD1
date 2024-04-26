@@ -1,0 +1,41 @@
+{% extends 'Navbar/artistnavbar.html' %}
+{% load static %}<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>msa</title>
+</head>
+<body>
+{% block body %}
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+
+      <div class="card-body">
+            <img src="{% static 'images/singer1.jpg' %}" class="card-img-top" alt="..."  height="500" width="500" >
+
+        <h5 class="card-title">Arjith Singh</h5>
+        <p class="card-text">Famous for vocals in his songs</p>
+        <p class="card-text">Trending songs </p>
+        <a href="#" class="btn btn-primary">Liked songs</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6" >
+    <div class="card" >
+      <div class="card-body">
+          <img src="{% static 'images/taylor.jpg' %}" class="card-img-top" alt="..." height="500" width="500">
+
+        <h5 class="card-title">Taylor Swift</h5>
+        <p class="card-text">Most trending singer</p>
+        <p class="card-text">Most Famous playlist</p>
+
+        <a href="#" class="btn btn-primary">liked songs</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
