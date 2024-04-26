@@ -1,0 +1,92 @@
+{% extends 'Navbar/usernavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        .card-container {
+            display: flex; /* Use flexbox layout */
+            flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+            gap: 20px; /* Add some space between cards */
+        }
+
+        .card {
+            width: 200px; /* Set a fixed width for each card */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+{% block body %}
+
+
+<div class="card-group">
+  <div class="card">
+  <img src="{% static 'images/nicki.jpg' %}" class="card-img-top" alt="SONG1" width="250" height="250">
+  <div class="card-body">
+    <h5 class="card-title"> Nicki minaj</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 1year ago</small></p>
+    <audio controls>
+      <source src="{% static 'audio/Chaleya.mp3' %}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+  <div class="card">
+  <img src="{% static 'images/drake.jpg' %}" class="card-img-top" alt="SONG1" width="250" height="250">
+  <div class="card-body">
+    <h5 class="card-title"> kiki do u love me </h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 5 years ago</small></p>
+    <audio controls>
+      <source src="{% static 'audio/Life of ram.mp3' %}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+  <div class="card">
+  <img src="{% static 'images/Khalid.jpg' %}" class="card-img-top" alt="SONG1" width="250" height="250">
+  <div class="card-body">
+    <h5 class="card-title"> Peaches </h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 5 years ago</small></p>
+    <audio controls>
+      <source src="{% static 'audio/Maate vinadhuga.mp3' %}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="card">
+  <img src="{% static 'images/steve.jpg' %}" class="card-img-top" alt="SONG1" width="250" height="250">
+  <div class="card-body">
+    <h5 class="card-title">Waste it on me </h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 5 years ago</small></p>
+    <audio controls>
+      <source src="{% static 'audio/steve aokii.mp3' %}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+  <div class="card">
+  <img src="{% static 'images/marshmallow.jpg' %}" class="card-img-top" alt="SONG1" width="250" height="250">
+  <div class="card-body">
+    <h5 class="card-title"> Marshallow </h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-body-secondary">Last updated 5 years ago</small></p>
+    <audio controls>
+      <source src="{% static 'audio/adiye.mp3' %}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+{% endblock %}
+  </div>
+</body>
+</html>

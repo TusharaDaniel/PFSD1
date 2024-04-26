@@ -1,0 +1,42 @@
+{% extends 'Navbar/projectnavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+{% if messages %}
+{% for messages in messages  %}
+{% if message.tags %}
+<script> alert ("{{message}}")</script>
+{% endif %}
+{% endfor %}
+{% endif %}
+<div class="container1">
+    <div class='bodycontainer'>
+        <h1> Register page </h1>
+        <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <label> UserName</label>
+            <input type="text" name="username" placeholder="enter name">
+            <br>
+            <br>
+            <label> Password</label>
+            <input type="password" name="password">
+            <br>
+            <br>
+            <label> Confirm Password</label>
+            <input type="password" name="password1">
+            <br>
+            <br>
+            <button type="submit" name="SUBMIT">Submit</button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

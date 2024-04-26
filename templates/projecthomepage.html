@@ -1,0 +1,41 @@
+{% extends 'Navbar/projectnavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC STREAMING APP</title>
+</head>
+<body>
+{% block body %}
+<div>
+    <div class="card">
+    <div class="card text-bg-dark">
+  <img src="{% static 'images/bgimage.jpg' %}" class="card-img" alt="bgimage.jpg">
+  <div class="card-img-overlay">
+    <h5 class="card-title">MUSIC STREAMING API</h5>
+    <p class="card-text">our project focuses on viewing about a portal where the artist or user anyone can login Artist can post and user can view the posts.</p>
+    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+  </div>
+</div>
+</div>
+
+
+    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+  </div>
+</div>
+</div>
+<link href="https://maxcdn.bobbbbbbbbbbbbotstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br>
+<br>
+{% if messages %}
+    {% for message in messages %}
+        <div>{{ message }}</div>
+    {% endfor %}
+{% endif %}
+{% endblock %}
+</body>
+</html>
+
+
+

@@ -1,0 +1,67 @@
+{% extends 'Navbar/artistnavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .small-input {
+    width: 100px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+</style>
+</head>
+
+<body>
+{% block body %}
+<div>
+   <div class="mx-auto p-2" style="width: 380px; height: 75px;font-size:23px;font-weight:bold;background-color:lightgreen;margin-top:10px;margin-bottom:15px" >
+ <bold>Artist Details and update songs</bold>
+</div
+<div>
+    <div>
+        <div class ="container" mt-5">
+        <br>
+    <br>
+    </div>
+    <form method ="post" action="{% url 'add_artist_details' %}">
+        {% csrf_token %}
+        <div class="form-group">
+        <label for="SONGTITLE"  > songtitle </label>
+            <input type="text" class="form-control small-input" name="songtitle" id="songtitle" placeholder="Enter the song name">
+        </div>
+<div class="form-group">
+    <label for="Artistname">Artistname</label>
+    <input type="text" class="form-control small-input" name="Artistname" id="Artistname" placeholder="Enter the artist name ">
+</div>
+
+        <div class ="form-group">
+            <label for="LyricsBY"> lyricsby</label>
+            <input type="text" class="form-control small-input" name="lyricsby" id="lyricsby" placeholder="enter who wrote lyrics ">
+
+        </div>
+        <div class ="form-group">
+            <label for="ALBUM"> Albums</label>
+            <input type="text" class="form-control small-input" name="album" id="album" placeholder="enter the names of albums">
+
+        </div>
+        <div class="form-group">
+        <label for="Genretype"> Genre Type </label>
+            <select class ="form-control" name="Genretype" id="Genretype">
+                <option value="Pop music">Pop music </option>
+                <option value="Indian pop"> Indian pop</option>
+                <option value="Jazz"> Jazz</option>
+                <option value="Bollywood"> Bollywood songs</option>
+                <option value="K-pop">K-pop</option>
+                <option value="English songs"> English songs</option>
+                <option value="EDM"> EDM BG songs</option>
+                <option value="Ballads"> Ballad based BG songs</option>
+            </select>
+        </div>
+<button type="Submit" class="btn btn-primary"> Post the Song</button>
+    </form>
+    </div>
+{% endblock %}
+</div>
+</body>
+</html>
